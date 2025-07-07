@@ -1,0 +1,17 @@
+.loader {
+  width: 100px;
+  height: 100px;
+  border: 10px solid var(--blue-opacity-color);
+  border-radius: var(--bdrs-circle);
+  border-top: 10px solid var(--blue-color);
+  animation: load 0.7s linear infinite forwards;
+  justify-self: center;
+  align-self: center;
+  display: none;
+}
+
+@keyframes load {
+  100% {
+    transform: rotate(360deg);
+  }
+}

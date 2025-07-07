@@ -1,0 +1,64 @@
+.intro {
+  background-image: linear-gradient(135deg, #672870 20%, #4fe0ff 100%);
+  background-repeat: no-repeat;
+  background-position: right bottom;
+  background-size: contain;
+  font-family: var(--font-second);
+  color: var(--white-color);
+  min-height: 440px;
+  display: flex;
+  align-items: center;
+  position: relative;
+  overflow: hidden;
+  z-index: 1;
+
+  @include breakpoint(sm) {
+    min-height: 470px;
+    align-items: flex-start;
+    padding-top: 40px;
+  }
+
+  &__content {
+    max-width: 640px;
+    width: 100%;
+  }
+
+  &__title {
+    font-size: var(--fz-32);
+    line-height: 112%;
+    font-weight: normal;
+
+    @include breakpoint(emd) {
+      font-size: var(--fz-24);
+      line-height: 108%;
+    }
+  }
+
+  &__descr {
+    font-size: var(--fz-18);
+    line-height: 133%;
+    margin: 26px 0;
+
+    @include breakpoint(emd) {
+      font-size: var(--fz-14);
+      line-height: 136%;
+      margin: 14px 0 26px;
+    }
+  }
+
+  &__button {
+    padding: 16px 40px;
+  }
+
+  &__image {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    z-index: -1;
+
+    @include breakpoint(md) {
+      bottom: -30px;
+      right: -40px;
+    }
+  }
+}

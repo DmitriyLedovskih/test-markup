@@ -1,0 +1,281 @@
+.header {
+  background-color: var(--white-color);
+
+  &__row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 10px;
+
+    @include breakpoint(lg) {
+      flex-wrap: wrap;
+    }
+  }
+
+  &__top {
+    background-color: var(--grey-color);
+    min-height: 34px;
+    display: flex;
+    align-items: center;
+  }
+
+  &__list {
+    gap: 12px;
+
+    &-item {
+      &:first-child {
+        @include breakpoint(emd) {
+          display: none;
+        }
+      }
+    }
+  }
+
+  &__nav {
+    @include breakpoint(emd) {
+      display: none;
+    }
+
+    &-left {
+      margin-left: auto;
+    }
+  }
+
+  &__menu {
+    gap: 16px;
+
+    &-button {
+      border-radius: var(--bdrs-8);
+      gap: 10px;
+      padding: 11px 18px;
+      width: 100%;
+      height: 100%;
+
+      &--last {
+        padding: 12px 6px;
+        @include breakpoint(lg) {
+          justify-content: flex-start;
+          padding: 11px 18px;
+        }
+      }
+    }
+  }
+
+  &__item {
+    font-size: var(--fz-14);
+    display: flex;
+    align-items: center;
+    gap: 12px;
+  }
+
+  &__text {
+    @include breakpoint(emd) {
+      display: none;
+    }
+  }
+
+  &__link {
+    gap: 4px;
+    color: var(--main-color);
+
+    &-icon {
+      width: 16px;
+      height: 16px;
+    }
+  }
+
+  &__main {
+    padding: 16px 0 24px;
+
+    &-container {
+      max-width: 1360px;
+      margin: 0 auto;
+      width: 100%;
+    }
+
+    &-left {
+      display: flex;
+      align-items: center;
+      gap: 35px;
+    }
+
+    &-menu {
+      @include breakpoint(lg) {
+        justify-content: space-between;
+        align-items: stretch;
+      }
+    }
+
+    &-icon {
+      @include breakpoint(lg) {
+        display: none;
+      }
+    }
+
+    &-blocks {
+      width: 100%;
+    }
+
+    &-block {
+      width: 100%;
+      background-color: var(--white-color);
+      display: flex;
+      align-items: center;
+
+      &--desk {
+        @include breakpoint(emd) {
+          display: none;
+        }
+      }
+
+      &--mobile {
+        display: none;
+        @include breakpoint(emd) {
+          display: block;
+        }
+      }
+
+      &:not(:last-child) {
+        margin-bottom: 16px;
+
+        @include breakpoint(emd) {
+          margin-bottom: 0;
+        }
+      }
+
+      &--fixed {
+        position: fixed;
+        left: 0;
+        top: 0;
+        z-index: 10;
+
+        .header__main-container {
+          padding: 25px 16px;
+        }
+      }
+    }
+  }
+
+  &__logo {
+    &--desk {
+      @include breakpoint(emd) {
+        display: none;
+      }
+    }
+
+    &--mobile {
+      display: none !important;
+
+      @include breakpoint(emd) {
+        display: inline-flex !important;
+      }
+    }
+  }
+
+  &__search {
+    @include breakpoint(elg) {
+      max-width: 440px;
+    }
+
+    @include breakpoint(lg) {
+      max-width: 100%;
+      order: 4;
+    }
+  }
+
+  &__social {
+    @include breakpoint(emd) {
+      display: none;
+    }
+  }
+
+  &__lang {
+    align-items: center;
+    gap: 6px;
+
+    &--mobile {
+      display: none;
+
+      @include breakpoint(emd) {
+        display: flex;
+      }
+    }
+
+    &--desk {
+      display: flex;
+
+      @include breakpoint(emd) {
+        display: none;
+      }
+    }
+
+    &-item {
+      &:first-child {
+        &::after {
+          content: "";
+          width: 1px;
+          height: 12px;
+          display: inline-block;
+          background-color: var(--main-color);
+          margin: 0 4px;
+        }
+      }
+    }
+
+    &-button {
+      color: var(--main-opacity-second-color);
+      font-size: var(--fz-16);
+      text-transform: uppercase;
+
+      @include breakpoint(emd) {
+        font-size: var(--fz-14);
+        line-height: var(--lh-12);
+      }
+
+      &--active {
+        color: var(--main-color);
+      }
+
+      &:hover {
+        color: var(--blue-color);
+      }
+    }
+  }
+
+  &__buttons {
+    gap: 16px;
+
+    @include breakpoint(emd) {
+      gap: 6px;
+    }
+
+    &-right {
+      @include breakpoint(emd) {
+        order: 3;
+      }
+    }
+
+    &-item {
+      &--desk {
+        display: block;
+
+        @include breakpoint(emd) {
+          display: none;
+        }
+      }
+
+      &--mobile {
+        display: none;
+
+        @include breakpoint(emd) {
+          display: block;
+        }
+      }
+    }
+
+    &-icon {
+      width: 24px;
+      height: 24px;
+    }
+  }
+}

@@ -1,0 +1,58 @@
+@mixin breakpoint($point) {
+  @if $point==exxl {
+    @media (max-width: 1742px) {
+      @content;
+    }
+  } @else if $point==xxl {
+    @media (max-width: 1600px) {
+      @content;
+    }
+  } @else if $point==xl {
+    @media (max-width: 1537px) {
+      @content;
+    }
+  } @else if $point==elg {
+    @media (max-width: 1367px) {
+      @content;
+    }
+  } @else if $point==lg {
+    @media (max-width: 1280px) {
+      @content;
+    }
+  } @else if $point==blg {
+    @media (max-width: 1024px) {
+      @content;
+    }
+  } @else if $point==md {
+    @media (max-width: 992px) {
+      @content;
+    }
+  } @else if $point==emd {
+    @media (max-width: 768px) {
+      @content;
+    }
+  } @else if $point==sm {
+    @media (max-width: 576px) {
+      @content;
+    }
+  } @else if $point==esm {
+    @media (max-width: 412px) {
+      @content;
+    }
+  } @else if $point ==portraits {
+    @media (orientation: portrait) and (min-aspect-ratio: 3 / 5) {
+      @content;
+    }
+  }
+
+  //  десктоп
+  @else if $point ==aspect_ratio {
+    @media (min-aspect-ratio: 3 / 5) {
+      @content;
+    }
+  } @else {
+    @media (max-width: $point) {
+      @content;
+    }
+  }
+}

@@ -1,0 +1,42 @@
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html,
+body {
+  font-family: var(--font-main);
+  font-size: var(--fz-main);
+  line-height: 1;
+  font-weight: normal;
+  // для демонстрации шапки
+  min-height: 1000vh;
+}
+
+main {
+  display: block;
+}
+
+body {
+  background: var(--bg-main-color);
+  overflow-x: hidden;
+  color: var(--main-color);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+  -webkit-tap-highlight-color: transparent;
+  -webkit-text-size-adjust: 100%;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+picture {
+  display: block;
+}

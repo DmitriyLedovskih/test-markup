@@ -1,0 +1,7 @@
+.gift-sets {
+  &__block {
+    &[data-menu-block="main"] {
+      display: flex;
+    }
+  }
+}
